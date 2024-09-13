@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use crate::parser::{Conditional, ExpressionData, OperationType, ContentType, TagType, ConditionData};
+use crate::parser::{Conditional, ExpressionData, OperationType, ContentType, TagType};
 
 /// Generates HTML code for a template var token
 pub fn generate_html_template_var(content: ExpressionData, context: HashMap<String,Vec<String>>) -> String {
@@ -90,7 +90,7 @@ pub fn generate_html_tag(content: Conditional, context: HashMap<String,Vec<Strin
 mod tests {
     use std::vec;
 
-    use crate::parser::get_conditional_data;
+    use crate::parser::{get_conditional_data, ConditionData};
 
     use super::*;
 
